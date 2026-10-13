@@ -162,7 +162,7 @@ void main() {
 //     }
 
 // }
-
+//p
 //  List<Map<String, dynamic>> stokgudang = [
 //     {
 //       'nama_barang': 'Gatsby',
