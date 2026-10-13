@@ -145,73 +145,69 @@ void main() {
 
 
 // import 'dart:io';
+// void main(){
+// var pin =1234;
+// var ceklogin = true;
 
-// void main() {
-//   List<Map<String, dynamic>> stokGudang = [
+
+
+// login(){
+//     stdout.write("Masukkan pin anda  : ");
+//     var inputuser = int.parse(stdin.readLineSync()!);
+
+//     if (inputuser == pin){
+//         ceklogin = false;
+//     } else {
+//         print("Pin yang anda masukkan salah");
+//     }
+
+// }
+
+//  List<Map<String, dynamic>> stokgudang = [
 //     {
-//       'nama': 'Gatsby',
-//       'lusin': 0,
+//       'nama_barang': 'Gatsby',
 //       'pcs': 0,
+//       'lusin': 0,
 //       'kotak': 0,
 //     },
 //     {
-//       'nama': 'Pixy',
-//       'lusin': 0,
+//       'nama_barang': 'Pixy',
 //       'pcs': 0,
+//       'lusin': 0,
 //       'kotak': 0,
 //     },
 //     {
-//       'nama': 'Darlie',
-//       'lusin': 0,
+//       'nama_barang': 'Darlie',
 //       'pcs': 0,
+//       'lusin': 0,
 //       'kotak': 0,
 //     },
 //   ];
 
-//   while (true) {
-//     print('\n===== MENU STOK GUDANG =====');
-//     print('1. Input Stok');
-//     print('2. Cek Stok');
-//     print('3. Kurangi Stok');
-//     print('4. Keluar');
-//     stdout.write('Pilih menu: ');
 
-//     int pilihan = int.tryParse(stdin.readLineSync() ?? '') ?? 0;
 
-//     if (pilihan == 1) {
-//       inputStok(stokGudang);
-//     } else if (pilihan == 2) {
-//       cekStok(stokGudang);
-//     } else if (pilihan == 3) {
-//       kurangiStok(stokGudang);
-//     } else if (pilihan == 4) {
-//       print('Program selesai.');
-//       break;
-//     } else {
-//       print('Pilihan tidak valid!');
-//     }
-//   }
-// }
 
-// void tampilkanBarang(List<Map<String, dynamic>> stokGudang) {
+
+
+//   void tampilkanBarang( stokgudang) {
 //   print('\nDaftar Barang:');
-//   for (int i = 0; i < stokGudang.length; i++) {
-//     print('${i + 1}. ${stokGudang[i]['nama']}');
+//   for (int i = 0; i < stokgudang.length; i++) {
+//     print('${i + 1}. ${stokgudang[i]['nama_barang']}');
 //   }
 // }
 
-// void inputStok(List<Map<String, dynamic>> stokGudang) {
-//   tampilkanBarang(stokGudang);
+// void inputStok( stokgudang) {
+//   tampilkanBarang(stokgudang);
 
 //   stdout.write('Pilih barang: ');
 //   int nomor = int.tryParse(stdin.readLineSync() ?? '') ?? 0;
 
-//   if (nomor < 1 || nomor > stokGudang.length) {
+//   if (nomor < 1 || nomor > stokgudang.length) {
 //     print('Barang tidak ditemukan!');
 //     return;
 //   }
 
-//   var barang = stokGudang[nomor - 1];
+//   var barang = stokgudang[nomor - 1];
 
 //   stdout.write('Masukkan jumlah kotak: ');
 //   int kotak = int.tryParse(stdin.readLineSync() ?? '') ?? 0;
@@ -231,32 +227,33 @@ void main() {
 //   barang['lusin'] += lusin;
 //   barang['pcs'] += pcs;
 
-//   print('Stok ${barang['nama']} berhasil ditambahkan!');
+//   print('Stok ${barang['nama_barang']} berhasil ditambahkan!');
 // }
 
-// void cekStok(List<Map<String, dynamic>> stokGudang) {
+// void cekStok( stokgudang) {
 //   print('\n===== DAFTAR STOK GUDANG =====');
 
-//   for (var barang in stokGudang) {
-//     print('\nNama Barang: ${barang['nama']}');
+//   for (var barang in stokgudang) {
+  
+//     print('Nama Barang: ${barang['nama_barang']}');
 //     print('Kotak: ${barang['kotak']}');
 //     print('Lusin: ${barang['lusin']}');
 //     print('Pcs: ${barang['pcs']}');
 //   }
 // }
 
-// void kurangiStok(List<Map<String, dynamic>> stokGudang) {
-//   tampilkanBarang(stokGudang);
+// void kurangiStok( stokgudang) {
+//   tampilkanBarang(stokgudang);
 
 //   stdout.write('Pilih barang: ');
 //   int nomor = int.tryParse(stdin.readLineSync() ?? '') ?? 0;
 
-//   if (nomor < 1 || nomor > stokGudang.length) {
+//   if (nomor < 1 || nomor > stokgudang.length) {
 //     print('Barang tidak ditemukan!');
 //     return;
 //   }
 
-//   var barang = stokGudang[nomor - 1];
+//   var barang = stokgudang[nomor - 1];
 
 //   stdout.write('Kurangi berapa kotak? ');
 //   int kotak = int.tryParse(stdin.readLineSync() ?? '') ?? 0;
@@ -299,5 +296,39 @@ void main() {
 //   barang['lusin'] = sisa ~/ 12;
 //   barang['pcs'] = sisa % 12;
 
-//   print('Stok ${barang['nama']} berhasil dikurangi!');
+//   print('Stok ${barang['nama_barang']} berhasil dikurangi!');
+// }
+
+
+
+// while (true) {
+    
+   
+//     if (ceklogin == true){
+//       login();
+//     } else {
+//         print('\n===== MENU STOK GUDANG =====');
+//     print('1. Input Stok');
+//     print('2. Cek Stok');
+//     print('3. Kurangi Stok');
+//     print('4. Keluar');
+//     stdout.write('Pilih menu: ');
+
+//     int pilihan = int.tryParse(stdin.readLineSync() ?? '') ?? 0;if (pilihan == 1) {
+//       inputStok(stokgudang);
+//     } else if (pilihan == 2) {
+//       cekStok(stokgudang);
+//     } else if (pilihan == 3) {
+//       kurangiStok(stokgudang);
+//     } else if (pilihan == 4) {
+//       print('Program selesai.');
+//       break;
+//     } else {
+//       print('Pilihan tidak valid!');
+//     }
+    
+//   }
+
+
+// }
 // }
